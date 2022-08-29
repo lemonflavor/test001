@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <p v-if="bool">这是标签内容</p>
+    <!-- <p v-else-if="true">这是第二个p标签内容</p>
+    <p v-else-if="true">这是第三个p标签内容</p> -->
+
+    <!-- <p v-else-if="false">这是第二个p标签内容</p>
+    <p v-else-if="true">这是第三个p标签内容</p> -->
+
+    <p v-else-if="false">这是第二个p标签内容</p>
+    <p v-else-if="false">这是第三个p标签内容</p>
+    <p v-else>这是最后一个p标签内容</p>
+  </div>
+
+  <script src="../lib/vue.js"></script>
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        bool: false
+      }
+    })
+  </script>
+</body>
+
+</html>

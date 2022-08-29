@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <p>单选select数据为:{{ value6 }}</p>
+    <select v-model="value6">
+      <option value="">请选择</option>
+      <option value="1">选项一</option>
+      <option value="2">选项二</option>
+      <option value="3">选项三</option>
+    </select>
+
+    <p>多选select数据为:{{ value7 }}</p>
+    <select v-model="value7" multiple>
+      <option value="1">选项一</option>
+      <option value="2">选项二</option>
+      <option value="3">选项三</option>
+    </select>
+  </div>
+
+  <script src="../lib/vue.js"></script>
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        value6: '',
+        value7: []
+      }
+    });
+  </script>
+</body>
+
+</html>
